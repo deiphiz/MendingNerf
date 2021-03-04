@@ -4,3 +4,6 @@
 out
 gen
 target
+.classpath
+.project
+*.prefs

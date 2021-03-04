@@ -86,7 +86,7 @@ public class NerfListener implements Listener {
             return;
         }
 
-        double expNeeded = plugin.getBaseExpForRepair() + ((Repairable) meta).getRepairCost() * plugin.getRepairCostModifier();
+        double expNeeded = plugin.getBaseExpForRepair() + Math.pow(((Repairable) meta).getRepairCost(), plugin.getRepairCostModifier()) * 0.01;
 
         double availableExp = dataContainer.getOrDefault(plugin.STORED_EXP_KEY, PersistentDataType.DOUBLE, 0.0) + event.getExperienceOrb().getExperience();
 
